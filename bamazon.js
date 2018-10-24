@@ -42,9 +42,9 @@ function QuantityAsk() {
   ]).then(function (input) {
     connection.query("SELECT * FROM products", function (err, res) {
 
-     if (input.quantity > res[1].stock_quantity) {
-       console.log("work")
-     }
+      if (input.item_id === "1") {
+       console.log("Stock Quanity for that item:" + res[0].stock_quantity)
+      }
 
     });
 
